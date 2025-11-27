@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import PropertyCard from "./PropertyCard";
 import type { Property } from "../../shared/schema";
 import { useState } from "react";
+import { sampleProperties } from "../data";
 
 export default function FeaturedListings() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,20 +14,20 @@ export default function FeaturedListings() {
     queryKey: ["/api/properties/featured"],
   });
 
-  const featuredProperties = properties || [];
+  const featuredProperties = sampleProperties || [];
   const visibleCount = 3;
 
   const handlePrevious = () => {
     setCurrentIndex((prev) =>
       prev === 0
         ? Math.max(0, featuredProperties.length - visibleCount)
-        : prev - 1,
+        : prev - 1
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prev) =>
-      prev >= featuredProperties.length - visibleCount ? 0 : prev + 1,
+      prev >= featuredProperties.length - visibleCount ? 0 : prev + 1
     );
   };
 
@@ -64,22 +65,30 @@ export default function FeaturedListings() {
           </p>
         </motion.div>
 
+        {/* MAIN CAROUSEL WRAPPER */}
         <div className="relative">
+
+          {/* ====== BUTTONS AT THE TOP LEFT/RIGHT OF THE CAROUSEL ====== */}
           {featuredProperties.length > visibleCount && (
             <>
+              {/* Previous Button */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-card/80 backdrop-blur-lg border border-white/20 hidden lg:flex"
+                className="absolute top-0 left-0 -translate-y-1/2
+                bg-card/80 backdrop-blur-lg border border-white/20 hidden lg:flex shadow-lg"
                 onClick={handlePrevious}
                 data-testid="button-carousel-prev"
               >
                 <ChevronLeft className="w-6 h-6" />
               </Button>
+
+              {/* Next Button */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-card/80 backdrop-blur-lg border border-white/20 hidden lg:flex"
+                className="absolute top-0 right-0 -translate-y-1/2
+                bg-card/80 backdrop-blur-lg border border-white/20 hidden lg:flex shadow-lg"
                 onClick={handleNext}
                 data-testid="button-carousel-next"
               >
@@ -87,6 +96,7 @@ export default function FeaturedListings() {
               </Button>
             </>
           )}
+          {/* =========================================================== */}
 
           <div className="overflow-hidden">
             <motion.div
@@ -110,7 +120,7 @@ export default function FeaturedListings() {
               {Array.from({
                 length: Math.max(
                   1,
-                  featuredProperties.length - visibleCount + 1,
+                  featuredProperties.length - visibleCount + 1
                 ),
               }).map((_, index) => (
                 <button
