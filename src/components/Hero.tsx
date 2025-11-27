@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { Search, MapPin, Home, DollarSign } from "lucide-react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
+// import { Search, MapPin, Home, DollarSign } from "lucide-react";
+// import { Button } from "./ui/button";
+// import { Input } from "./ui/input";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "./ui/select";
 import heroImage from "../../attached_assets/generated_images/luxury_waterfront_mansion_hero.png"
 
 export default function Hero() {

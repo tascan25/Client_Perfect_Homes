@@ -6,12 +6,10 @@ import {
   MapPin,
   Facebook,
   Instagram,
-  Linkedin,
-  Twitter,
   Youtube,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+// import { Input } from "./ui/input";
 
 export default function Footer() {
   return (

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
@@ -22,31 +23,30 @@ import { sampleProperties } from "../data";
 
 
 export default function Properties() {
-  const [showFilters, setShowFilters] = useState(false);
-  const [priceRange, setPriceRange] = useState([0, 20000000]);
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
-  const [selectedLocation, setSelectedLocation] = useState("all");
-  const [bedrooms, setBedrooms] = useState("all");
-  const [bathrooms, setBathrooms] = useState("all");
+  const [priceRange] = useState([0, 20000000]);
+  const [selectedTypes] = useState<string[]>([]);
+  const [selectedLocation] = useState("all");
+  const [bedrooms] = useState("all");
+  const [bathrooms] = useState("all");
 
-  const { data: properties, isLoading } = useQuery<Property[]>({
+  const { isLoading } = useQuery<Property[]>({
     queryKey: ["/api/properties"],
   });
 
-  const propertyTypes = [
-    "Mansion",
-    "Penthouse",
-    "Villa",
-    "Estate",
-    "Luxury Condo",
-  ];
-  const locations = [
-    "Beverly Hills",
-    "Malibu",
-    "Manhattan",
-    "Miami Beach",
-    "Aspen",
-  ];
+  // const propertyTypes = [
+  //   "Mansion",
+  //   "Penthouse",
+  //   "Villa",
+  //   "Estate",
+  //   "Luxury Condo",
+  // ];
+  // const locations = [
+  //   "Beverly Hills",
+  //   "Malibu",
+  //   "Manhattan",
+  //   "Miami Beach",
+  //   "Aspen",
+  // ];
 
   const filteredProperties = sampleProperties?.filter((property) => {
     if (
@@ -82,19 +82,19 @@ export default function Properties() {
     return true;
   });
 
-  const handleTypeToggle = (type: string) => {
-    setSelectedTypes((prev) =>
-      prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
-    );
-  };
+  // const handleTypeToggle = (type: string) => {
+  //   setSelectedTypes((prev) =>
+  //     prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type],
+  //   );
+  // };
 
-  const clearFilters = () => {
-    setPriceRange([0, 20000000]);
-    setSelectedTypes([]);
-    setSelectedLocation("all");
-    setBedrooms("all");
-    setBathrooms("all");
-  };
+  // const clearFilters = () => {
+  //   setPriceRange([0, 20000000]);
+  //   setSelectedTypes([]);
+  //   setSelectedLocation("all");
+  //   setBedrooms("all");
+  //   setBathrooms("all");
+  // };
 
   return (
     <div className="min-h-screen pt-20">

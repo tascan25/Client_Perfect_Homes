@@ -65,7 +65,7 @@ const sampleTestimonials = [
     ];
 
 export default function Testimonials() {
-  const { data: testimonials, isLoading } = useQuery<Testimonial[]>({
+  const { isLoading } = useQuery<Testimonial[]>({
     queryKey: ["/api/testimonials"],
   });
 

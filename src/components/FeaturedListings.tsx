@@ -10,7 +10,7 @@ import { sampleProperties } from "../data";
 export default function FeaturedListings() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const { data: properties, isLoading } = useQuery<Property[]>({
+  const { isLoading } = useQuery<Property[]>({
     queryKey: ["/api/properties/featured"],
   });
 

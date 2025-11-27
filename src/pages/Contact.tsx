@@ -46,28 +46,28 @@ export default function Contact() {
     contactMutation.mutate(formData);
   };
 
-  const team = [
-    {
-      name: "Sarah Johnson",
-      role: "Senior Real Estate Agent",
-      initials: "SJ",
-    },
-    {
-      name: "Michael Chen",
-      role: "Luxury Property Specialist",
-      initials: "MC",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Client Relations Manager",
-      initials: "ER",
-    },
-    {
-      name: "David Thompson",
-      role: "Investment Advisor",
-      initials: "DT",
-    },
-  ];
+  // const team = [
+  //   {
+  //     name: "Sarah Johnson",
+  //     role: "Senior Real Estate Agent",
+  //     initials: "SJ",
+  //   },
+  //   {
+  //     name: "Michael Chen",
+  //     role: "Luxury Property Specialist",
+  //     initials: "MC",
+  //   },
+  //   {
+  //     name: "Emily Rodriguez",
+  //     role: "Client Relations Manager",
+  //     initials: "ER",
+  //   },
+  //   {
+  //     name: "David Thompson",
+  //     role: "Investment Advisor",
+  //     initials: "DT",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen pt-20">
