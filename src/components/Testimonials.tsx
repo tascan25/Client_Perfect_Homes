@@ -5,6 +5,65 @@ import { Card } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import type { Testimonial } from "../../shared/schema";
 
+
+
+const sampleTestimonials = [
+      {
+        id:1,
+        name: "James Mitchell",
+        role: "Real Estate Investor",
+        content:
+          "Working with LuxeEstate was an absolute pleasure. Their professionalism and market knowledge helped me find the perfect investment property. Highly recommended!",
+        rating: 5,
+        avatarUrl: null,
+      },
+      {
+        id:2,
+        name: "Patricia Hernandez",
+        role: "Homeowner",
+        content:
+          "The team at LuxeEstate went above and beyond to help us find our dream home. Their attention to detail and personalized service made all the difference.",
+        rating: 5,
+        avatarUrl: null,
+      },
+      {
+        id:3,
+        name: "Robert Chen",
+        role: "Business Executive",
+        content:
+          "Exceptional service from start to finish. The property selection was outstanding, and the entire process was smooth and professional. I couldn't be happier with my purchase.",
+        rating: 5,
+        avatarUrl: null,
+      },
+      {
+        id:4,
+        name: "Elizabeth Thompson",
+        role: "Entrepreneur",
+        content:
+          "LuxeEstate truly understands luxury real estate. They found us exactly what we were looking for and handled every detail with care and expertise.",
+        rating: 5,
+        avatarUrl: null,
+      },
+      {
+        id:5,
+        name: "Michael Rodriguez",
+        role: "Retired Executive",
+        content:
+          "Outstanding experience! The team's knowledge of the luxury market is unparalleled. They made finding our retirement home effortless and enjoyable.",
+        rating: 5,
+        avatarUrl: null,
+      },
+      {
+        id:6,
+        name: "Sarah Williams",
+        role: "Doctor",
+        content:
+          "From our first meeting to closing, everything was handled professionally and efficiently. LuxeEstate's commitment to excellence truly shows in their work.",
+        rating: 5,
+        avatarUrl: null,
+      },
+    ];
+
 export default function Testimonials() {
   const { data: testimonials, isLoading } = useQuery<Testimonial[]>({
     queryKey: ["/api/testimonials"],
@@ -45,7 +104,7 @@ export default function Testimonials() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials?.map((testimonial, index) => (
+          {sampleTestimonials?.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0, y: 20 }}
