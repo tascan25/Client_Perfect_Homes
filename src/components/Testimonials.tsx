@@ -13,7 +13,7 @@ const sampleTestimonials = [
         name: "James Mitchell",
         role: "Real Estate Investor",
         content:
-          "Working with LuxeEstate was an absolute pleasure. Their professionalism and market knowledge helped me find the perfect investment property. Highly recommended!",
+          "Working with Perfect Homes was an absolute pleasure. Their professionalism and market knowledge helped me find the perfect investment property. Highly recommended!",
         rating: 5,
         avatarUrl: null,
       },
@@ -22,7 +22,7 @@ const sampleTestimonials = [
         name: "Patricia Hernandez",
         role: "Homeowner",
         content:
-          "The team at LuxeEstate went above and beyond to help us find our dream home. Their attention to detail and personalized service made all the difference.",
+          "The team at Perfect Homes went above and beyond to help us find our dream home. Their attention to detail and personalized service made all the difference.",
         rating: 5,
         avatarUrl: null,
       },
@@ -40,7 +40,7 @@ const sampleTestimonials = [
         name: "Elizabeth Thompson",
         role: "Entrepreneur",
         content:
-          "LuxeEstate truly understands luxury real estate. They found us exactly what we were looking for and handled every detail with care and expertise.",
+          "Perfect Homes truly understands luxury real estate. They found us exactly what we were looking for and handled every detail with care and expertise.",
         rating: 5,
         avatarUrl: null,
       },
@@ -58,7 +58,7 @@ const sampleTestimonials = [
         name: "Sarah Williams",
         role: "Doctor",
         content:
-          "From our first meeting to closing, everything was handled professionally and efficiently. LuxeEstate's commitment to excellence truly shows in their work.",
+          "From our first meeting to closing, everything was handled professionally and efficiently. Perfect Homes's commitment to excellence truly shows in their work.",
         rating: 5,
         avatarUrl: null,
       },
