@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "wouter";
 import { motion } from "framer-motion";
-import { useQuery, useMutation } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import {
   Bed,
   Bath,
@@ -14,7 +14,6 @@ import {
   Check,
   Mail,
   Phone,
-  // User,
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
@@ -26,6 +25,7 @@ import { useToast } from "../hooks/use-toast";
 import { apiRequest, queryClient } from "../lib/queryClient";
 import type { Property, InsertContactSubmission } from "../../shared/schema";
 import { Link } from "wouter";
+import { sampleProperties } from "../data";
 
 export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
@@ -38,16 +38,10 @@ export default function PropertyDetail() {
   });
   const { toast } = useToast();
 
-  const { data: property, isLoading } = useQuery<Property>({
-    queryKey: ["/api/properties", id],
-    queryFn: async () => {
-      const res = await fetch(`/api/properties/${id}`);
-      if (!res.ok) {
-        throw new Error("Property not found");
-      }
-      return res.json();
-    },
-  });
+  // ⭐ REPLACED API QUERY WITH LOCAL DATA LOOKUP
+  const property: Property | undefined = sampleProperties.find(
+    (p) => p.id === id
+  );
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactSubmission) => {
@@ -78,13 +72,7 @@ export default function PropertyDetail() {
     });
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen pt-20 flex items-center justify-center">
-        <div className="animate-pulse text-muted-foreground">Loading...</div>
-      </div>
-    );
-  }
+  // ⭐ LOADING STATE REMOVED — not needed now
 
   if (!property) {
     return (
