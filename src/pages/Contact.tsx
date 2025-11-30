@@ -115,7 +115,7 @@ export default function Contact() {
                     Address
                   </h3>
                   <p className="text-muted-foreground">
-                    Sector-91, Surya Nagar, Faridabad-121013, Haryana, India
+                     61 GF, Surya Nagar, Sector-91,Faridabad-121013, Haryana, India
                   </p>
                 </div>
               </div>
@@ -126,8 +126,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+91-9711065465</p>
-                  <p className="text-muted-foreground">+91-9717978778</p>
+                  <a href="tel:+919711065465"><p className="text-muted-foreground">+91-9711065465</p></a>
+                  <a href="tel:+919717978778"><p className="text-muted-foreground">+91-9717978778</p></a>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground">info@perfecthomes.com</p>
+                  <a href="mailto:Perfecthomesmk@gmail.com"><p className="text-muted-foreground">Perfecthomesmk@gmail.com</p></a>
                 </div>
               </div>
 

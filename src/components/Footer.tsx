@@ -149,12 +149,12 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0 text-primary" />
-                <span>+91-9711065465</span>
-                <span>+91-9717978778</span>
+                <a href="tel:+919711065465"><span>+91-9711065465</span></a>
+                <a href="tel:+919717978778"><span>+91-9717978778</span></a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0 text-primary" />
-                <span>info@perfecthomes.com</span>
+                <a href="mailto:Perfecthomesmk@gmail.com"><span>Perfecthomesmk@gmail.com</span></a>
               </li>
             </ul>
 

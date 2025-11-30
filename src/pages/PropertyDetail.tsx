@@ -327,11 +327,11 @@ export default function PropertyDetail() {
                 <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span>(555) 123-4567</span>
+                    <span>+91-9711065465</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Mail className="w-5 h-5 text-primary" />
-                    <span>info@luxeestate.com</span>
+                    <span className="cursor-pointer"><a href="mailto:Perfecthomesmk@gmail.com">Perfecthomesmk@gmail.com</a></span>
                   </div>
                 </div>
               </Card>
