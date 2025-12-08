@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bed, Bath, Square, MapPin, Heart } from "lucide-react";
+import { Bed, Bath, Square, MapPin } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";

@@ -7,10 +7,10 @@ import {
   Bath,
   Square,
   MapPin,
-  Heart,
-  Share2,
+  // Heart,
+  // Share2,
   ChevronLeft,
-  ChevronRight,
+  // ChevronRight,
   Check,
   Mail,
   Phone,
@@ -29,7 +29,7 @@ import { sampleProperties } from "../data";
 
 export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
