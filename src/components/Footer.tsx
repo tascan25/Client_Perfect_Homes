@@ -144,7 +144,7 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
                 <span>
-                  Sector-91, Surya Nagar, Faridabad-121013, Haryana, India
+                   61 GF, Sector-91, Surya Nagar, Faridabad-121013, Haryana, India
                 </span>
               </li>
               <li className="flex items-center gap-2">
