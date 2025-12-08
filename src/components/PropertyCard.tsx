@@ -46,19 +46,19 @@ export default function PropertyCard({ property, index = 0 }: PropertyCardProps)
               {property.status}
             </Badge>
 
-            <Button
+            {/* <Button
               size="icon"
               variant="ghost"
               className="absolute bottom-4 right-4 bg-card/60 backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity"
               data-testid={`button-favorite-${property.id}`}
             >
               <Heart className="w-4 h-4" />
-            </Button>
+            </Button> */}
 
             <div className="absolute bottom-4 left-4">
-              <div className="text-3xl font-bold text-white font-serif">
+              {/* <div className="text-3xl font-bold text-white font-serif">
                 ${(property.price / 1000000).toFixed(2)}M
-              </div>
+              </div> */}
               <div className="text-sm text-white/80 flex items-center gap-1 mt-1">
                 <MapPin className="w-3 h-3" />
                 {property.location}

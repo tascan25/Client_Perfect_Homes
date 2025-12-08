@@ -121,7 +121,9 @@ export default function PropertyDetail() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
 
-                {images.length > 1 && (
+
+                // this is the section where if the more than one image is available for the properties then only it will be uncommented to show the next and previous buttons for image slider
+                {/* {images.length > 1 && (
                   <>
                     <Button
                       size="icon"
@@ -150,9 +152,9 @@ export default function PropertyDetail() {
                       <ChevronRight className="w-6 h-6" />
                     </Button>
                   </>
-                )}
+                )} */}
 
-                <div className="absolute top-4 right-4 flex gap-2">
+                {/* <div className="absolute top-4 right-4 flex gap-2">
                   <Button
                     size="icon"
                     variant="ghost"
@@ -169,15 +171,15 @@ export default function PropertyDetail() {
                   >
                     <Heart className="w-4 h-4" />
                   </Button>
-                </div>
+                </div> */}
 
                 <div className="absolute bottom-4 left-4">
                   <Badge className="bg-primary/90 backdrop-blur-sm mb-2">
                     {property.status}
                   </Badge>
-                  <div className="text-4xl font-bold text-white font-serif">
+                  {/* <div className="text-4xl font-bold text-white font-serif">
                     ${(property.price / 1000000).toFixed(2)}M
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
