@@ -1,10 +1,10 @@
 import type { Property } from "../../shared/schema"; 
-// import homeImage4 from "../../attached_assets/generated_images/beachfront_estate.png";
 // import homeImage5 from "../../attached_assets/generated_images/mediterranean_villa_classic.png";
 // import homeImage6 from "../../attached_assets/generated_images/luxury_condo_interior.png";  
 import home1 from "../assets/homes/home1.jpg";
 import home2 from "../assets/homes/home2.jpg";
 import home3 from "../assets/homes/home3.jpg";
+import homeImage4 from "../assets/home/home4.jpg";
  
  export const sampleProperties: Property[] = [
       {
@@ -77,31 +77,31 @@ import home3 from "../assets/homes/home3.jpg";
           "Private Garage",
         ],
       },
-      // {
-      //   id:"4",
-      //   title: "Beachfront Estate",
-      //   description:
-      //     "Experience paradise in this stunning beachfront estate with direct ocean access. Modern tropical architecture meets luxury living with expansive terraces, infinity pool, and lush landscaping creating your private oasis.",
-      //   price: 12500000,
-      //   location: "Miami Beach",
-      //   bedrooms: 7,
-      //   bathrooms: 8,
-      //   squareFeet: 10500,
-      //   propertyType: "Estate",
-      //   status: "available",
-      //   imageUrl: homeImage4,
-      //   featured: false,
-      //   amenities: [
-      //     "Private Beach",
-      //     "Infinity Pool",
-      //     "Outdoor Pavilion",
-      //     "Summer Kitchen",
-      //     "Home Spa",
-      //     "Tennis Court",
-      //     "Guest House",
-      //     "Tropical Gardens",
-      //   ],
-      // },
+      {
+        id:"4",
+        title: "Coastal Estate",
+        description:
+          "Experience paradise in this stunning beachfront estate with direct ocean access. Modern tropical architecture meets luxury living with expansive terraces, infinity pool, and lush landscaping creating your private oasis.",
+        price: 12500000,
+        location: "Faridabad, Sector - 70",
+        bedrooms: 7,
+        bathrooms: 8,
+        squareFeet: 10500,
+        propertyType: "Estate",
+        status: "available",
+        imageUrl: homeImage4,
+        featured: false,
+        amenities: [
+          "Private Beach",
+          "Infinity Pool",
+          "Outdoor Pavilion",
+          "Summer Kitchen",
+          "Home Spa",
+          "Tennis Court",
+          "Guest House",
+          "Tropical Gardens",
+        ],
+      },
       // {
       //   id:"5",
       //   title: "Mediterranean Villa",
