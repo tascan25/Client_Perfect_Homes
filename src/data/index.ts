@@ -9,7 +9,7 @@ import home3 from "../assets/homes/home3.jpg";
  export const sampleProperties: Property[] = [
       {
         id:"1",
-        title: "Waterfront Luxury Mansion",
+        title: "Luxury Mansion",
         description:
           "An extraordinary waterfront estate featuring contemporary architecture, floor-to-ceiling windows, and breathtaking ocean views. This magnificent property offers the ultimate in luxury living with an infinity pool, private beach access, and meticulously landscaped grounds.",
         price: 8500000,
@@ -22,19 +22,16 @@ import home3 from "../assets/homes/home3.jpg";
         imageUrl: home1,
         featured: true,
         amenities: [
-          "Infinity Pool",
           "Private Beach Access",
           "Home Theater",
           "Wine Cellar",
           "Smart Home System",
           "Gourmet Kitchen",
-          "Ocean Views",
-          "Outdoor Kitchen",
         ],
       },
       {
         id:"2",
-        title: "Modern Downtown Penthouse",
+        title: "Modern Penthouse",
         description:
           "Sophisticated urban living at its finest. This stunning penthouse features sleek contemporary design, panoramic city views, and premium finishes throughout. Located in the heart of downtown with world-class amenities and concierge services.",
         price: 5200000,
@@ -59,7 +56,7 @@ import home3 from "../assets/homes/home3.jpg";
       },
       {
         id:"3",
-        title: "Hillside Villa with Mountain Views",
+        title: "Contemporary Villa",
         description:
           "Perched on a hillside with sweeping mountain vistas, this contemporary villa combines modern minimalism with natural beauty. Features include an open floor plan, seamless indoor-outdoor living, and premium materials throughout.",
         price: 6800000,
@@ -73,9 +70,6 @@ import home3 from "../assets/homes/home3.jpg";
           home3,
         featured: true,
         amenities: [
-          "Mountain Views",
-          "Ski-In/Ski-Out",
-          "Hot Tub",
           "Wine Room",
           "Home Gym",
           "Heated Floors",
