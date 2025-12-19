@@ -4,7 +4,7 @@ import type { Property } from "../../shared/schema";
 import home1 from "../assets/homes/home1.jpg";
 import home2 from "../assets/homes/home2.jpg";
 import home3 from "../assets/homes/home3.jpg";
-import homeImage4 from "../assets/home/home4.jpg";
+import homeImage4 from "../assets/homes/home4.jpg";
  
  export const sampleProperties: Property[] = [
       {
