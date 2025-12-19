@@ -13,7 +13,7 @@ import home3 from "../assets/homes/home3.jpg";
         description:
           "An extraordinary waterfront estate featuring contemporary architecture, floor-to-ceiling windows, and breathtaking ocean views. This magnificent property offers the ultimate in luxury living with an infinity pool, private beach access, and meticulously landscaped grounds.",
         price: 8500000,
-        location: "Malibu",
+        location: "Faridabad, Sector - 70",
         bedrooms: 6,
         bathrooms: 7,
         squareFeet: 8500,
@@ -38,7 +38,7 @@ import home3 from "../assets/homes/home3.jpg";
         description:
           "Sophisticated urban living at its finest. This stunning penthouse features sleek contemporary design, panoramic city views, and premium finishes throughout. Located in the heart of downtown with world-class amenities and concierge services.",
         price: 5200000,
-        location: "Manhattan",
+        location: "Faridabad, Sector - 70",
         bedrooms: 4,
         bathrooms: 4,
         squareFeet: 4200,
@@ -63,7 +63,7 @@ import home3 from "../assets/homes/home3.jpg";
         description:
           "Perched on a hillside with sweeping mountain vistas, this contemporary villa combines modern minimalism with natural beauty. Features include an open floor plan, seamless indoor-outdoor living, and premium materials throughout.",
         price: 6800000,
-        location: "Aspen",
+        location: "Faridabad, Sector - 70",
         bedrooms: 5,
         bathrooms: 6,
         squareFeet: 6200,

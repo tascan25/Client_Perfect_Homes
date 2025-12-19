@@ -114,9 +114,10 @@ export default function Contact() {
                   <h3 className="font-semibold text-foreground mb-1">
                     Address
                   </h3>
-                  <p className="text-muted-foreground">
-                     61 GF, Surya Nagar, Sector-91,Faridabad-121013, Haryana, India
-                  </p>
+                  <a href="https://www.google.com/maps/search/61+GF,+Sector-91,+Surya+Nagar,+Phase-1,+Faridabad-121013,+Haryana,+India/@28.4761894,77.3270563,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                  target="_blank"><p className="text-muted-foreground">
+                     61 GF, Surya Nagar, Sector-91, Phase-1, Faridabad-121013, Haryana, India
+                  </p></a>
                 </div>
               </div>
 
@@ -316,7 +317,7 @@ export default function Contact() {
             <div className="flex flex-wrap justify-center gap-12 mt-8">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">
-                  $2.5B+
+                  2.5K+
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Properties Sold

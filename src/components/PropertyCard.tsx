@@ -80,7 +80,7 @@ export default function PropertyCard({ property, index = 0 }: PropertyCardProps)
             {property.description}
           </p>
 
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          {/* <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1" data-testid={`text-bedrooms-${property.id}`}>
               <Bed className="w-4 h-4" />
               <span>{property.bedrooms} Beds</span>
@@ -93,7 +93,7 @@ export default function PropertyCard({ property, index = 0 }: PropertyCardProps)
               <Square className="w-4 h-4" />
               <span>{property.squareFeet.toLocaleString()} sqft</span>
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-4 pt-4 border-t border-white/10">
             <Button

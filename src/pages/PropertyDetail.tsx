@@ -192,7 +192,7 @@ export default function PropertyDetail() {
                   <span className="text-lg">{property.location}</span>
                 </div>
 
-                <div className="flex flex-wrap gap-6 mb-8">
+                {/* <div className="flex flex-wrap gap-6 mb-8">
                   <div className="flex items-center gap-2">
                     <Bed className="w-5 h-5 text-primary" />
                     <span className="text-foreground font-medium">
@@ -211,7 +211,7 @@ export default function PropertyDetail() {
                       {property.squareFeet.toLocaleString()} sqft
                     </span>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="prose prose-lg max-w-none">
                   <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
@@ -329,7 +329,7 @@ export default function PropertyDetail() {
                 <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span>+91-9711065465</span>
+                    <a href="tel:+91-9711065465">+91-9711065465</a>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Mail className="w-5 h-5 text-primary" />
