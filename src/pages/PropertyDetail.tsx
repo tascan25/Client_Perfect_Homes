@@ -3,9 +3,9 @@ import { useParams } from "wouter";
 import { motion } from "framer-motion";
 import { useMutation } from "@tanstack/react-query";
 import {
-  Bed,
-  Bath,
-  Square,
+  // Bed,
+  // Bath,
+  // Square,
   MapPin,
   // Heart,
   // Share2,
