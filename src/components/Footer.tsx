@@ -143,9 +143,9 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
-                <a href="https://www.google.com/maps/search/61+GF,+Sector-91,+Surya+Nagar,+Phase-1,+Faridabad-121013,+Haryana,+India/@28.4761894,77.3270563,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                <a href="https://www.google.com/maps/search/61+GF,+Sector-91,+Surya+Nagar,+Phase-2,+Faridabad-121013,+Haryana,+India/@28.4761894,77.3270563,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
                 target="_blank"><span>
-                   61 GF, Sector-91, Surya Nagar, Phase-1, Faridabad-121013, Haryana, India
+                   61 GF, Sector-91, Surya Nagar, Phase-2, Faridabad-121013, Haryana, India
                 </span></a>
               </li>
               <li className="flex items-center gap-2">
