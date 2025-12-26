@@ -7,6 +7,7 @@ import {
   Facebook,
   Instagram,
   Youtube,
+  Clock,
 } from "lucide-react";
 import { Button } from "./ui/button";
 // import { Input } from "./ui/input";
@@ -30,47 +31,41 @@ export default function Footer() {
               Excellence in every detail.
             </p>
             <div className="flex gap-2">
-              <a href="www.google.com" target="_blank">
+              <a href="https://www.facebook.com/share/1FoF9egc7T/" target="_blank">
                 <Button
                   size="icon"
                   variant="ghost"
                   className="border border-white/10"
                   data-testid="button-social-facebook"
+                  
                 >
                   <Facebook className="w-4 h-4" />
                 </Button>
               </a>
 
-              <a href="www.google.com" target="_blank">
+              <a href="https://www.instagram.com/perfecthomesmk?igsh=MWEzcWpyNDZtbThpMw==" target="_blank" className="cursor-pointer">
                 <Button
                   size="icon"
                   variant="ghost"
                   className="border border-white/10"
                   data-testid="button-social-instagram"
+                  
                 >
                   <Instagram className="w-4 h-4" />
                 </Button>
               </a>
 
-              <a href="www.google.com" target="_blank">
+              <a href="https://www.youtube.com/" target="_blank" className="cursor-pointer">
                 <Button
                   size="icon"
                   variant="ghost"
                   className="border border-white/10"
                   data-testid="button-social-twitter"
+                  
                 >
                   <Youtube className="w-4 h-4" />
                 </Button>
               </a>
-
-              {/* <Button
-                size="icon"
-                variant="ghost"
-                className="border border-white/10"
-                data-testid="button-social-linkedin"
-              >
-                <Linkedin className="w-4 h-4" />
-              </Button> */}
             </div>
           </div>
 
@@ -156,6 +151,10 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0 text-primary" />
                 <a href="mailto:Perfecthomesmk@gmail.com"><span>Perfecthomesmk@gmail.com</span></a>
+              </li>
+              <li className="flex items-center gap-2 cursor-pointer">
+                <Clock className="w-4 h-4 flex-shrink-0 text-primary" />
+                <span className="ml-2">Mon-Sun: 10:00 AM - 7:00 PM</span>
               </li>
             </ul>
 

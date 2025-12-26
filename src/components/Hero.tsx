@@ -49,8 +49,7 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto italic"
           >
-            Explore the finest collection of premium properties, handpicked for
-            discerning clients seeking excellence
+           We Are Deal In All Types Property Residential, Commercial, Industrial All Faridabad
           </motion.p>
         </motion.div>
 
