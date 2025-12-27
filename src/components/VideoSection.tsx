@@ -1,13 +1,12 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef, memo } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Play, Pause } from 'lucide-react';
 import companyvideo from '../assets/video/compvid.mp4'
-import { memo } from 'react';
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
-  const sectionRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   const togglePlay = () => {
