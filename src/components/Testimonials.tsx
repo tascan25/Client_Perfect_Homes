@@ -8,7 +8,7 @@ import type { Testimonial } from "../../shared/schema";
 const sampleTestimonials = [
   {
     id:1,
-    name: "James Mitchell",
+    name: "Vikas Kumar",
     role: "Real Estate Investor",
     content:
       "Working with Perfect Homes was an absolute pleasure. Their professionalism and market knowledge helped me find the perfect investment property. Highly recommended!",
@@ -17,7 +17,7 @@ const sampleTestimonials = [
   },
   {
     id:2,
-    name: "Patricia Hernandez",
+    name: "Anjali Mehta",
     role: "Homeowner",
     content:
       "The team at Perfect Homes went above and beyond to help us find our dream home. Their attention to detail and personalized service made all the difference.",
@@ -26,7 +26,7 @@ const sampleTestimonials = [
   },
   {
     id:3,
-    name: "Robert Chen",
+    name: "Rajesh Singh",
     role: "Business Executive",
     content:
       "Exceptional service from start to finish. The property selection was outstanding, and the entire process was smooth and professional. I couldn't be happier with my purchase.",
@@ -35,7 +35,7 @@ const sampleTestimonials = [
   },
   {
     id:4,
-    name: "Elizabeth Thompson",
+    name: "Priya Sharma",
     role: "Entrepreneur",
     content:
       "Perfect Homes truly understands luxury real estate. They found us exactly what we were looking for and handled every detail with care and expertise.",
@@ -44,7 +44,7 @@ const sampleTestimonials = [
   },
   {
     id:5,
-    name: "Michael Rodriguez",
+    name: "Amitabh Joshi",
     role: "Retired Executive",
     content:
       "Outstanding experience! The team's knowledge of the luxury market is unparalleled. They made finding our retirement home effortless and enjoyable.",
@@ -53,7 +53,7 @@ const sampleTestimonials = [
   },
   {
     id:6,
-    name: "Sarah Williams",
+    name: "Sunita Verma",
     role: "Doctor",
     content:
       "From our first meeting to closing, everything was handled professionally and efficiently. Perfect Homes's commitment to excellence truly shows in their work.",
