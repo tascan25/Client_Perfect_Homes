@@ -5,11 +5,13 @@ import Testimonials from "../components/Testimonials";
 import { Button } from "../components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, Award, Shield, Users } from "lucide-react";
+import VideoSection from "../components/VideoSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <VideoSection/>
       <FeaturedListings />
 
       <section className="py-20 px-6 lg:px-8 bg-background">
@@ -22,7 +24,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Why Choose <span className="text-primary">LuxeEstate</span>
+              Why Choose <span className="text-primary">Perfect Homes</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Unparalleled service and expertise in luxury real estate
