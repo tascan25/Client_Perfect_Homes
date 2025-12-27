@@ -3,14 +3,8 @@ import { useParams } from "wouter";
 import { motion } from "framer-motion";
 import { useMutation } from "@tanstack/react-query";
 import {
-  // Bed,
-  // Bath,
-  // Square,
   MapPin,
-  // Heart,
-  // Share2,
   ChevronLeft,
-  // ChevronRight,
   Check,
   Mail,
   Phone,
@@ -38,7 +32,6 @@ export default function PropertyDetail() {
   });
   const { toast } = useToast();
 
-  // ⭐ REPLACED API QUERY WITH LOCAL DATA LOOKUP
   const property: Property | undefined = sampleProperties.find(
     (p) => p.id === id
   );
@@ -72,16 +65,14 @@ export default function PropertyDetail() {
     });
   };
 
-  // ⭐ LOADING STATE REMOVED — not needed now
-
   if (!property) {
     return (
-      <div className="min-h-screen pt-20 flex items-center justify-center">
+      <div className="min-h-screen pt-20 flex items-center justify-center" style={{ backgroundColor: '#fafafa' }}>
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">
+          <h1 className="text-2xl font-bold mb-4" style={{ color: '#1a1a2e' }}>
             Property not found
           </h1>
-          <Button asChild>
+          <Button asChild style={{ backgroundColor: '#d4af37', color: '#1a1a2e' }}>
             <Link href="/properties">Back to Properties</Link>
           </Button>
         </div>
@@ -92,7 +83,7 @@ export default function PropertyDetail() {
   const images = [property.imageUrl, property.imageUrl, property.imageUrl];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20" style={{ backgroundColor: '#fafafa' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,6 +95,7 @@ export default function PropertyDetail() {
             className="mb-6 gap-2"
             asChild
             data-testid="button-back"
+            style={{ color: '#1a1a2e' }}
           >
             <Link href="/properties">
               <ChevronLeft className="w-4 h-4" />
@@ -113,129 +105,63 @@ export default function PropertyDetail() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-8">
-              <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-card/40">
+              <div className="relative aspect-[16/10] rounded-2xl overflow-hidden" style={{ backgroundColor: '#1a1a2e' }}>
                 <img
                   src={images[currentImageIndex]}
                   alt={property.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-
-
-                // this is the section where if the more than one image is available for the properties then only it will be uncommented to show the next and previous buttons for image slider
-                {/* {images.length > 1 && (
-                  <>
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-card/80 backdrop-blur-lg border border-white/20"
-                      onClick={() =>
-                        setCurrentImageIndex((prev) =>
-                          prev === 0 ? images.length - 1 : prev - 1
-                        )
-                      }
-                      data-testid="button-image-prev"
-                    >
-                      <ChevronLeft className="w-6 h-6" />
-                    </Button>
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-card/80 backdrop-blur-lg border border-white/20"
-                      onClick={() =>
-                        setCurrentImageIndex((prev) =>
-                          prev === images.length - 1 ? 0 : prev + 1
-                        )
-                      }
-                      data-testid="button-image-next"
-                    >
-                      <ChevronRight className="w-6 h-6" />
-                    </Button>
-                  </>
-                )} */}
-
-                {/* <div className="absolute top-4 right-4 flex gap-2">
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="bg-card/80 backdrop-blur-lg border border-white/20"
-                    data-testid="button-share"
-                  >
-                    <Share2 className="w-4 h-4" />
-                  </Button>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="bg-card/80 backdrop-blur-lg border border-white/20"
-                    data-testid="button-favorite"
-                  >
-                    <Heart className="w-4 h-4" />
-                  </Button>
-                </div> */}
+                <div 
+                  className="absolute inset-0"
+                  style={{ background: 'linear-gradient(to top, rgba(26, 26, 46, 0.6) 0%, transparent 60%)' }}
+                />
 
                 <div className="absolute bottom-4 left-4">
-                  <Badge className="bg-primary/90 backdrop-blur-sm mb-2">
+                  <Badge 
+                    className="backdrop-blur-sm mb-2"
+                    style={{ backgroundColor: 'rgba(212, 175, 55, 0.95)', color: '#1a1a2e' }}
+                  >
                     {property.status}
                   </Badge>
-                  {/* <div className="text-4xl font-bold text-white font-serif">
-                    ${(property.price / 1000000).toFixed(2)}M
-                  </div> */}
                 </div>
               </div>
 
               <div>
-                <h1 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+                <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4" style={{ color: '#1a1a2e' }}>
                   {property.title}
                 </h1>
-                <div className="flex items-center gap-2 text-muted-foreground mb-6">
-                  <MapPin className="w-5 h-5" />
+                <div className="flex items-center gap-2 mb-6" style={{ color: '#666666' }}>
+                  <MapPin className="w-5 h-5" style={{ color: '#d4af37' }} />
                   <span className="text-lg">{property.location}</span>
                 </div>
 
-                {/* <div className="flex flex-wrap gap-6 mb-8">
-                  <div className="flex items-center gap-2">
-                    <Bed className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">
-                      {property.bedrooms} Bedrooms
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Bath className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">
-                      {property.bathrooms} Bathrooms
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Square className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">
-                      {property.squareFeet.toLocaleString()} sqft
-                    </span>
-                  </div>
-                </div> */}
-
                 <div className="prose prose-lg max-w-none">
-                  <h2 className="text-2xl font-serif font-bold text-foreground mb-4">
+                  <h2 className="text-2xl font-serif font-bold mb-4" style={{ color: '#1a1a2e' }}>
                     Description
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="leading-relaxed" style={{ color: '#666666' }}>
                     {property.description}
                   </p>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-serif font-bold text-foreground mb-6">
+                <h2 className="text-2xl font-serif font-bold mb-6" style={{ color: '#1a1a2e' }}>
                   Amenities
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {property.amenities.map((amenity, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-3 text-foreground"
+                      className="flex items-center gap-3"
+                      style={{ color: '#1a1a2e' }}
                       data-testid={`text-amenity-${index}`}
                     >
-                      <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Check className="w-4 h-4 text-primary" />
+                      <div 
+                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+                        style={{ backgroundColor: 'rgba(212, 175, 55, 0.15)' }}
+                      >
+                        <Check className="w-4 h-4" style={{ color: '#d4af37' }} />
                       </div>
                       <span>{amenity}</span>
                     </div>
@@ -245,13 +171,19 @@ export default function PropertyDetail() {
             </div>
 
             <div className="lg:col-span-1">
-              <Card className="p-6 bg-card/40 backdrop-blur-lg border-white/20 sticky top-24">
-                <h3 className="text-xl font-semibold text-foreground mb-6">
+              <Card 
+                className="p-6 backdrop-blur-lg sticky top-24 shadow-xl"
+                style={{ 
+                  backgroundColor: '#ffffff',
+                  border: '1px solid rgba(212, 175, 55, 0.2)'
+                }}
+              >
+                <h3 className="text-xl font-semibold mb-6" style={{ color: '#1a1a2e' }}>
                   Request Information
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Label htmlFor="name" className="mb-2 block">
+                    <Label htmlFor="name" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                       Name
                     </Label>
                     <Input
@@ -263,11 +195,15 @@ export default function PropertyDetail() {
                       placeholder="Your name"
                       required
                       data-testid="input-name"
-                      className="bg-card/60 backdrop-blur border-white/20"
+                      className="backdrop-blur"
+                      style={{ 
+                        backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                        borderColor: 'rgba(212, 175, 55, 0.3)'
+                      }}
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="mb-2 block">
+                    <Label htmlFor="email" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                       Email
                     </Label>
                     <Input
@@ -280,11 +216,15 @@ export default function PropertyDetail() {
                       placeholder="your@email.com"
                       required
                       data-testid="input-email"
-                      className="bg-card/60 backdrop-blur border-white/20"
+                      className="backdrop-blur"
+                      style={{ 
+                        backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                        borderColor: 'rgba(212, 175, 55, 0.3)'
+                      }}
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone" className="mb-2 block">
+                    <Label htmlFor="phone" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                       Phone
                     </Label>
                     <Input
@@ -296,11 +236,15 @@ export default function PropertyDetail() {
                       }
                       placeholder="(555) 123-4567"
                       data-testid="input-phone"
-                      className="bg-card/60 backdrop-blur border-white/20"
+                      className="backdrop-blur"
+                      style={{ 
+                        backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                        borderColor: 'rgba(212, 175, 55, 0.3)'
+                      }}
                     />
                   </div>
                   <div>
-                    <Label htmlFor="message" className="mb-2 block">
+                    <Label htmlFor="message" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                       Message
                     </Label>
                     <Textarea
@@ -313,26 +257,38 @@ export default function PropertyDetail() {
                       required
                       rows={4}
                       data-testid="textarea-message"
-                      className="bg-card/60 backdrop-blur border-white/20 resize-none"
+                      className="backdrop-blur resize-none"
+                      style={{ 
+                        backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                        borderColor: 'rgba(212, 175, 55, 0.3)'
+                      }}
                     />
                   </div>
                   <Button
                     type="submit"
-                    className="w-full"
+                    className="w-full transition-all hover:scale-105"
                     disabled={contactMutation.isPending}
                     data-testid="button-submit-inquiry"
+                    style={{ 
+                      backgroundColor: '#d4af37',
+                      color: '#1a1a2e',
+                      fontWeight: '600'
+                    }}
                   >
                     {contactMutation.isPending ? "Sending..." : "Send Inquiry"}
                   </Button>
                 </form>
 
-                <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
-                  <div className="flex items-center gap-3 text-muted-foreground">
-                    <Phone className="w-5 h-5 text-primary" />
+                <div 
+                  className="mt-6 pt-6 space-y-3"
+                  style={{ borderTop: '1px solid rgba(212, 175, 55, 0.2)' }}
+                >
+                  <div className="flex items-center gap-3" style={{ color: '#666666' }}>
+                    <Phone className="w-5 h-5" style={{ color: '#d4af37' }} />
                     <a href="tel:+91-9711065465">+91-9711065465</a>
                   </div>
-                  <div className="flex items-center gap-3 text-muted-foreground">
-                    <Mail className="w-5 h-5 text-primary" />
+                  <div className="flex items-center gap-3" style={{ color: '#666666' }}>
+                    <Mail className="w-5 h-5" style={{ color: '#d4af37' }} />
                     <span className="cursor-pointer"><a href="mailto:Perfecthomesmk@gmail.com">Perfecthomesmk@gmail.com</a></span>
                   </div>
                 </div>
