@@ -42,8 +42,9 @@ export default function Navbar() {
                 whileHover={{ scale: 1.02 }}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-md bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-md  flex items-center justify-center">
                   <Building2 className="w-6 h-6 text-primary-foreground" />
+                  <img src="/logo.png" alt="Logo" />
                 </div>
                 <span className="text-2xl font-serif font-bold text-foreground">
                   Perfect Homes
