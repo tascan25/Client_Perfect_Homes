@@ -29,7 +29,11 @@ const VideoSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <section 
+      ref={sectionRef} 
+      className="py-20 px-4"
+      style={{ background: 'linear-gradient(to bottom, #fafafa 0%, #ffffff 100%)' }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.div
@@ -38,10 +42,13 @@ const VideoSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-           <span className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6 leading-tight w-full flex flex-col items-center justify-center gap-4 text text-primary italic">Perfect Home</span>
+          <h2 
+            className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6 leading-tight flex flex-col items-center justify-center gap-4 italic"
+            style={{ color: '#d4af37' }}
+          >
+            Perfect Home
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#666666' }}>
             Experience the journey of finding your dream property with Perfect Homes
           </p>
         </motion.div>
@@ -54,7 +61,7 @@ const VideoSection = () => {
           className="relative rounded-2xl overflow-hidden shadow-2xl group"
         >
           {/* Video Element */}
-          <div className="relative aspect-video bg-gray-900">
+          <div className="relative aspect-video" style={{ backgroundColor: '#1a1a2e' }}>
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
@@ -67,7 +74,10 @@ const VideoSection = () => {
             </video>
 
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            <div 
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: 'linear-gradient(to top, rgba(26, 26, 46, 0.6) 0%, transparent 50%)' }}
+            />
 
             {/* Play/Pause Button */}
             <button
@@ -75,11 +85,14 @@ const VideoSection = () => {
               className="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300"
               aria-label={isPlaying ? "Pause video" : "Play video"}
             >
-              <div className={`bg-white/90 backdrop-blur-sm rounded-full p-6 transition-all duration-300 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
+              <div 
+                className={`rounded-full p-6 transition-all duration-300 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}
+                style={{ backgroundColor: 'rgba(212, 175, 55, 0.95)' }}
+              >
                 {isPlaying ? (
-                  <Pause className="w-8 h-8 text-gray-900" />
+                  <Pause className="w-8 h-8" style={{ color: '#1a1a2e' }} />
                 ) : (
-                  <Play className="w-8 h-8 text-gray-900 ml-1" />
+                  <Play className="w-8 h-8 ml-1" style={{ color: '#1a1a2e' }} />
                 )}
               </div>
             </button>
@@ -90,37 +103,15 @@ const VideoSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8"
+            className="absolute bottom-0 left-0 right-0 p-8"
+            style={{ background: 'linear-gradient(to top, rgba(26, 26, 46, 0.95) 0%, transparent 100%)' }}
           >
             <div className="flex items-center justify-between text-white">
               <div>
-                {/* <h3 className="text-2xl font-semibold mb-1">Your Journey Starts Here</h3> */}
-                <p className="text-white/80">Professional real estate solutions</p>
+                <p style={{ color: 'rgba(255, 255, 255, 0.9)' }}>Professional real estate solutions</p>
               </div>
-              {/* <button className="hidden md:block px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Learn More
-              </button> */}
             </div>
           </motion.div>
-        </motion.div>
-
-        {/* Stats or Features Below Video */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
-        >
-          {[
-            { number: "500+", label: "Properties Sold" },
-            { number: "98%", label: "Client Satisfaction" },
-            { number: "15+", label: "Years Experience" }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
         </motion.div>
       </div>
     </section>

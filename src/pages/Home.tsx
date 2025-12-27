@@ -14,7 +14,7 @@ export default function Home() {
       <VideoSection/>
       <FeaturedListings />
 
-      <section className="py-20 px-6 lg:px-8 bg-background">
+      <section className="py-20 px-6 lg:px-8" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -23,10 +23,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Why Choose <span className="text-primary">Perfect Homes</span>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: '#1a1a2e' }}>
+              Why Choose <span style={{ color: '#d4af37' }}>Perfect Homes</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#666666' }}>
               Unparalleled service and expertise in luxury real estate
             </p>
           </motion.div>
@@ -55,15 +55,22 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="text-center p-8 rounded-xl bg-card/40 backdrop-blur-lg border border-white/20 hover-elevate transition-all duration-300"
+                className="text-center p-8 rounded-xl backdrop-blur-lg hover-elevate transition-all duration-300 shadow-lg"
+                style={{
+                  backgroundColor: '#ffffff',
+                  border: '1px solid rgba(212, 175, 55, 0.2)'
+                }}
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-                  <feature.icon className="w-8 h-8 text-primary" />
+                <div 
+                  className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(212, 175, 55, 0.15)' }}
+                >
+                  <feature.icon className="w-8 h-8" style={{ color: '#d4af37' }} />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold mb-3" style={{ color: '#1a1a2e' }}>
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <p style={{ color: '#666666' }}>{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -75,7 +82,17 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-center mt-12"
           >
-            <Button size="lg" asChild data-testid="button-view-all">
+            <Button 
+              size="lg" 
+              asChild 
+              data-testid="button-view-all"
+              className="transition-all hover:scale-105"
+              style={{
+                backgroundColor: '#d4af37',
+                color: '#1a1a2e',
+                fontWeight: '600'
+              }}
+            >
               <Link href="/properties">
                 View All Properties
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -87,26 +104,50 @@ export default function Home() {
 
       <Testimonials />
 
-      <section className="py-20 px-6 lg:px-8 bg-background">
+      <section className="py-20 px-6 lg:px-8" style={{ backgroundColor: '#fafafa' }}>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-xl rounded-2xl border border-white/20 p-12 md:p-16"
+            className="text-center backdrop-blur-xl rounded-2xl p-12 md:p-16 shadow-xl"
+            style={{
+              background: 'linear-gradient(135deg, rgba(26, 26, 46, 0.97) 0%, rgba(26, 26, 46, 0.93) 100%)',
+              border: '1px solid rgba(212, 175, 55, 0.3)'
+            }}
           >
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4" style={{ color: '#ffffff' }}>
               Ready to Find Your Dream Home?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#e0e0e0' }}>
               Let our expert team guide you through every step of your luxury real estate journey
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild data-testid="button-browse-properties">
+              <Button 
+                size="lg" 
+                asChild 
+                data-testid="button-browse-properties"
+                className="transition-all hover:scale-105"
+                style={{
+                  backgroundColor: '#d4af37',
+                  color: '#1a1a2e',
+                  fontWeight: '600'
+                }}
+              >
                 <Link href="/properties">Browse Properties</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild data-testid="button-contact-us">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                asChild 
+                data-testid="button-contact-us"
+                className="transition-all hover:scale-105"
+                style={{
+                  borderColor: '#d4af37',
+                  color: '#ffffff'
+                }}
+              >
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>

@@ -33,12 +33,12 @@ export default function FeaturedListings() {
 
   if (isLoading) {
     return (
-      <section className="py-20 px-6 lg:px-8 bg-background">
+      <section className="py-20 px-6 lg:px-8" style={{ backgroundColor: '#fafafa' }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
               <div key={i} className="animate-pulse">
-                <div className="bg-card/40 rounded-lg h-96" />
+                <div className="rounded-lg h-96" style={{ backgroundColor: 'rgba(26, 26, 46, 0.1)' }} />
               </div>
             ))}
           </div>
@@ -48,7 +48,7 @@ export default function FeaturedListings() {
   }
 
   return (
-    <section className="py-20 px-6 lg:px-8 bg-background" id="Featured">
+    <section className="py-20 px-6 lg:px-8" style={{ backgroundColor: '#fafafa' }} id="Featured">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,46 +57,48 @@ export default function FeaturedListings() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-            Featured <span className="text-primary">Properties</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: '#1a1a2e' }}>
+            Featured <span style={{ color: '#d4af37' }}>Properties</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#666666' }}>
             Handpicked exclusive listings from our premium collection
           </p>
         </motion.div>
 
-        {/* MAIN CAROUSEL WRAPPER */}
         <div className="relative">
-
-          {/* ====== BUTTONS AT THE TOP LEFT/RIGHT OF THE CAROUSEL ====== */}
           {featuredProperties.length > visibleCount && (
             <>
-              {/* Previous Button */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute top-0 left-0 -translate-y-1/2
-                bg-card/80 backdrop-blur-lg border border-white/20 hidden lg:flex shadow-lg"
+                className="absolute top-0 left-0 -translate-y-1/2 backdrop-blur-lg hidden lg:flex shadow-lg transition-all hover:scale-110"
                 onClick={handlePrevious}
                 data-testid="button-carousel-prev"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(212, 175, 55, 0.3)',
+                  color: '#d4af37'
+                }}
               >
                 <ChevronLeft className="w-6 h-6" />
               </Button>
 
-              {/* Next Button */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="absolute top-0 right-0 -translate-y-1/2
-                bg-card/80 backdrop-blur-lg border border-white/20 hidden lg:flex shadow-lg"
+                className="absolute top-0 right-0 -translate-y-1/2 backdrop-blur-lg hidden lg:flex shadow-lg transition-all hover:scale-110"
                 onClick={handleNext}
                 data-testid="button-carousel-next"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                  border: '1px solid rgba(212, 175, 55, 0.3)',
+                  color: '#d4af37'
+                }}
               >
                 <ChevronRight className="w-6 h-6" />
               </Button>
             </>
           )}
-          {/* =========================================================== */}
 
           <div className="overflow-hidden">
             <motion.div
@@ -126,11 +128,11 @@ export default function FeaturedListings() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    currentIndex === index
-                      ? "bg-primary w-8"
-                      : "bg-muted-foreground/30"
-                  }`}
+                  className="h-2 rounded-full transition-all"
+                  style={{
+                    backgroundColor: currentIndex === index ? '#d4af37' : 'rgba(102, 102, 102, 0.3)',
+                    width: currentIndex === index ? '32px' : '8px'
+                  }}
                   data-testid={`button-carousel-dot-${index}`}
                 />
               ))}

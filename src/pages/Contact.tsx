@@ -46,32 +46,15 @@ export default function Contact() {
     contactMutation.mutate(formData);
   };
 
-  // const team = [
-  //   {
-  //     name: "Sarah Johnson",
-  //     role: "Senior Real Estate Agent",
-  //     initials: "SJ",
-  //   },
-  //   {
-  //     name: "Michael Chen",
-  //     role: "Luxury Property Specialist",
-  //     initials: "MC",
-  //   },
-  //   {
-  //     name: "Emily Rodriguez",
-  //     role: "Client Relations Manager",
-  //     initials: "ER",
-  //   },
-  //   {
-  //     name: "David Thompson",
-  //     role: "Investment Advisor",
-  //     initials: "DT",
-  //   },
-  // ];
-
   return (
-    <div className="min-h-screen pt-20">
-      <div className="bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-xl border-b border-white/10">
+    <div className="min-h-screen pt-20" style={{ backgroundColor: '#fafafa' }}>
+      <div 
+        className="backdrop-blur-xl border-b" 
+        style={{ 
+          background: 'linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.85) 100%)',
+          borderColor: 'rgba(212, 175, 55, 0.2)'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,10 +62,10 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Get in <span className="text-primary">Touch</span>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4" style={{ color: '#ffffff' }}>
+              Get in <span style={{ color: '#d4af37' }}>Touch</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#e0e0e0' }}>
               Ready to find your dream property? Our team is here to help you
               every step of the way
             </p>
@@ -97,58 +80,82 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-6">
+            <h2 className="text-3xl font-serif font-bold mb-6" style={{ color: '#1a1a2e' }}>
               Contact Information
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="mb-8" style={{ color: '#666666' }}>
               Fill out the form and our team will get back to you within 24
               hours.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-primary" />
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: 'rgba(212, 175, 55, 0.15)' }}
+                >
+                  <MapPin className="w-6 h-6" style={{ color: '#d4af37' }} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">
+                  <h3 className="font-semibold mb-1" style={{ color: '#1a1a2e' }}>
                     Address
                   </h3>
-                  <a href="https://www.google.com/maps/search/61+GF,+Sector-91,+Surya+Nagar,+Phase-2,+Faridabad-121013,+Haryana,+India/@28.4761894,77.3270563,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
-                  target="_blank"><p className="text-muted-foreground">
-                     61 GF, Surya Nagar, Sector-91, Phase-2, Faridabad-121013, Haryana, India
-                  </p></a>
+                  <a 
+                    href="https://www.google.com/maps/search/61+GF,+Sector-91,+Surya+Nagar,+Phase-2,+Faridabad-121013,+Haryana,+India/@28.4761894,77.3270563,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                    target="_blank"
+                    style={{ color: '#666666' }}
+                    className="hover:underline"
+                  >
+                    <p>
+                      61 GF, Surya Nagar, Sector-91, Phase-2, Faridabad-121013, Haryana, India
+                    </p>
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-primary" />
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: 'rgba(212, 175, 55, 0.15)' }}
+                >
+                  <Phone className="w-6 h-6" style={{ color: '#d4af37' }} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <a href="tel:+919711065465"><p className="text-muted-foreground">+91-9711065465</p></a>
-                  <a href="tel:+919717978778"><p className="text-muted-foreground">+91-9717978778</p></a>
+                  <h3 className="font-semibold mb-1" style={{ color: '#1a1a2e' }}>Phone</h3>
+                  <a href="tel:+919711065465" style={{ color: '#666666' }} className="hover:underline block">
+                    <p>+91-9711065465</p>
+                  </a>
+                  <a href="tel:+919717978778" style={{ color: '#666666' }} className="hover:underline block">
+                    <p>+91-9717978778</p>
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-primary" />
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: 'rgba(212, 175, 55, 0.15)' }}
+                >
+                  <Mail className="w-6 h-6" style={{ color: '#d4af37' }} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a href="mailto:Perfecthomesmk@gmail.com"><p className="text-muted-foreground">Perfecthomesmk@gmail.com</p></a>
+                  <h3 className="font-semibold mb-1" style={{ color: '#1a1a2e' }}>Email</h3>
+                  <a href="mailto:Perfecthomesmk@gmail.com" style={{ color: '#666666' }} className="hover:underline">
+                    <p>Perfecthomesmk@gmail.com</p>
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-primary" />
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: 'rgba(212, 175, 55, 0.15)' }}
+                >
+                  <Clock className="w-6 h-6" style={{ color: '#d4af37' }} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Hours</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="font-semibold mb-1" style={{ color: '#1a1a2e' }}>Hours</h3>
+                  <p style={{ color: '#666666' }}>
                     Monday - Sunday: 10:00 AM - 7:00 PM
                   </p>
                 </div>
@@ -161,13 +168,19 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Card className="p-8 bg-card/40 backdrop-blur-lg border-white/20">
-              <h2 className="text-2xl font-serif font-bold text-foreground mb-6">
+            <Card 
+              className="p-8 backdrop-blur-lg shadow-xl"
+              style={{ 
+                backgroundColor: '#ffffff',
+                border: '1px solid rgba(212, 175, 55, 0.2)'
+              }}
+            >
+              <h2 className="text-2xl font-serif font-bold mb-6" style={{ color: '#1a1a2e' }}>
                 Send us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Label htmlFor="contact-name" className="mb-2 block">
+                  <Label htmlFor="contact-name" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                     Name *
                   </Label>
                   <Input
@@ -179,12 +192,16 @@ export default function Contact() {
                     placeholder="Your full name"
                     required
                     data-testid="input-contact-name"
-                    className="bg-card/60 backdrop-blur border-white/20"
+                    className="backdrop-blur"
+                    style={{ 
+                      backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                      borderColor: 'rgba(212, 175, 55, 0.3)'
+                    }}
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="contact-email" className="mb-2 block">
+                  <Label htmlFor="contact-email" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                     Email *
                   </Label>
                   <Input
@@ -197,12 +214,16 @@ export default function Contact() {
                     placeholder="your@email.com"
                     required
                     data-testid="input-contact-email"
-                    className="bg-card/60 backdrop-blur border-white/20"
+                    className="backdrop-blur"
+                    style={{ 
+                      backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                      borderColor: 'rgba(212, 175, 55, 0.3)'
+                    }}
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="contact-phone" className="mb-2 block">
+                  <Label htmlFor="contact-phone" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                     Phone
                   </Label>
                   <Input
@@ -214,12 +235,16 @@ export default function Contact() {
                     }
                     placeholder="(555) 123-4567"
                     data-testid="input-contact-phone"
-                    className="bg-card/60 backdrop-blur border-white/20"
+                    className="backdrop-blur"
+                    style={{ 
+                      backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                      borderColor: 'rgba(212, 175, 55, 0.3)'
+                    }}
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="contact-message" className="mb-2 block">
+                  <Label htmlFor="contact-message" className="mb-2 block" style={{ color: '#1a1a2e' }}>
                     Message *
                   </Label>
                   <Textarea
@@ -232,16 +257,25 @@ export default function Contact() {
                     required
                     rows={6}
                     data-testid="textarea-contact-message"
-                    className="bg-card/60 backdrop-blur border-white/20 resize-none"
+                    className="backdrop-blur resize-none"
+                    style={{ 
+                      backgroundColor: 'rgba(250, 250, 250, 0.8)',
+                      borderColor: 'rgba(212, 175, 55, 0.3)'
+                    }}
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="w-full transition-all hover:scale-105"
                   size="lg"
                   disabled={contactMutation.isPending}
                   data-testid="button-submit-contact"
+                  style={{ 
+                    backgroundColor: '#d4af37',
+                    color: '#1a1a2e',
+                    fontWeight: '600'
+                  }}
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message"}
                 </Button>
@@ -250,46 +284,6 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-serif font-bold text-foreground text-center mb-4">
-            Meet Our <span className="text-primary">Team</span>
-          </h2>
-          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Our experienced professionals are dedicated to helping you find your
-            perfect property
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                data-testid={`card-team-${index}`}
-              >
-                <Card className="p-6 bg-card/40 backdrop-blur-lg border-white/20 text-center hover-elevate transition-all duration-300">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">
-                      {member.initials}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{member.role}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -297,13 +291,19 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mt-20"
         >
-          <Card className="p-12 bg-gradient-to-br from-card/60 to-card/40 backdrop-blur-xl border-white/20 text-center">
-            <Building2 className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
+          <Card 
+            className="p-12 backdrop-blur-xl text-center shadow-xl"
+            style={{ 
+              background: 'linear-gradient(135deg, rgba(26, 26, 46, 0.97) 0%, rgba(26, 26, 46, 0.93) 100%)',
+              border: '1px solid rgba(212, 175, 55, 0.3)'
+            }}
+          >
+            <Building2 className="w-16 h-16 mx-auto mb-6" style={{ color: '#d4af37' }} />
+            <h2 className="text-3xl font-serif font-bold mb-4" style={{ color: '#ffffff' }}>
               About Perfect Homes
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-              For over 25 years, LuxeEstate has been the premier destination for
+            <p className="text-lg max-w-3xl mx-auto mb-6" style={{ color: '#e0e0e0' }}>
+              For over 25 years, Perfect Homes has been the premier destination for
               luxury real estate. We specialize in exceptional properties and
               provide unparalleled service to our discerning clients. Our
               commitment to excellence and deep market expertise ensures you'll
@@ -312,28 +312,28 @@ export default function Contact() {
             </p>
             <div className="flex flex-wrap justify-center gap-12 mt-8">
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">
+                <div className="text-3xl font-bold mb-1" style={{ color: '#d4af37' }}>
                   2.5K+
                 </div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm" style={{ color: '#cccccc' }}>
                   Properties Sold
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">500+</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-3xl font-bold mb-1" style={{ color: '#d4af37' }}>500+</div>
+                <div className="text-sm" style={{ color: '#cccccc' }}>
                   Active Listings
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">25+</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-3xl font-bold mb-1" style={{ color: '#d4af37' }}>25+</div>
+                <div className="text-sm" style={{ color: '#cccccc' }}>
                   Years Experience
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">98%</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-3xl font-bold mb-1" style={{ color: '#d4af37' }}>98%</div>
+                <div className="text-sm" style={{ color: '#cccccc' }}>
                   Client Satisfaction
                 </div>
               </div>

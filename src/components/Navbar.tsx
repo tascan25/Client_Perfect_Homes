@@ -31,9 +31,13 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-card/80 backdrop-blur-xl border-b border-white/10 shadow-xl"
+            ? "backdrop-blur-xl border-b shadow-xl"
             : "bg-transparent"
         }`}
+        style={{
+          backgroundColor: isScrolled ? 'rgba(26, 26, 46, 0.9)' : 'transparent',
+          borderColor: isScrolled ? 'rgba(212, 175, 55, 0.2)' : 'transparent'
+        }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -42,11 +46,13 @@ export default function Navbar() {
                 whileHover={{ scale: 1.02 }}
                 className="flex items-center gap-2 cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-md  flex items-center justify-center">
-                  <Building2 className="w-6 h-6 text-primary-foreground" />
-                  <img src="/logo.png" alt="Logo" />
+                <div 
+                  className="w-10 h-10 flex items-center justify-center"
+                >
+                  {/* <Building2 className="w-6 h-6" style={{ color: '#1a1a2e' }} /> */}
+                  <img src="/logo.png" alt="Logo" className="" />
                 </div>
-                <span className="text-2xl font-serif font-bold text-foreground">
+                <span className="text-2xl font-serif font-bold" style={{ color: '#ffffff' }}>
                   Perfect Homes
                 </span>
               </motion.div>
@@ -61,11 +67,10 @@ export default function Navbar() {
                 >
                   <motion.span
                     whileHover={{ scale: 1.05 }}
-                    className={`text-base font-medium transition-colors cursor-pointer ${
-                      location === link.href
-                        ? "text-primary"
-                        : "text-foreground hover:text-primary"
-                    }`}
+                    className="text-base font-medium transition-colors cursor-pointer"
+                    style={{
+                      color: location === link.href ? '#d4af37' : '#ffffff'
+                    }}
                   >
                     {link.label}
                   </motion.span>
@@ -79,6 +84,7 @@ export default function Navbar() {
                 size="default"
                 data-testid="button-phone"
                 className="gap-2"
+                style={{ color: '#ffffff' }}
               >
                 <Phone className="w-4 h-4" />
                 <a href="tel:+919711065465"><span>+91-9711065465</span></a>
@@ -88,6 +94,11 @@ export default function Navbar() {
                 size="default"
                 data-testid="button-schedule"
                 asChild
+                style={{ 
+                  backgroundColor: '#d4af37',
+                  color: '#1a1a2e',
+                  fontWeight: '600'
+                }}
               >
                 <Link href="/contact">Schedule Viewing</Link>
               </Button>
@@ -99,6 +110,7 @@ export default function Navbar() {
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="button-menu-toggle"
+              style={{ color: '#ffffff' }}
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -117,8 +129,9 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 md:hidden bg-card/95 backdrop-blur-2xl"
+            className="fixed inset-0 z-40 md:hidden backdrop-blur-2xl"
             data-testid="mobile-menu"
+            style={{ backgroundColor: 'rgba(26, 26, 46, 0.98)' }}
           >
             <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
               {navLinks.map((link, index) => (
@@ -134,11 +147,10 @@ export default function Navbar() {
                   >
                     <span
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-2xl font-medium flex items-center gap-3 ${
-                        location === link.href
-                          ? "text-primary"
-                          : "text-foreground"
-                      }`}
+                      className="text-2xl font-medium flex items-center gap-3"
+                      style={{
+                        color: location === link.href ? '#d4af37' : '#ffffff'
+                      }}
                     >
                       <link.icon className="w-6 h-6" />
                       {link.label}
@@ -157,6 +169,7 @@ export default function Navbar() {
                   size="lg"
                   className="w-full gap-2"
                   data-testid="mobile-button-phone"
+                  style={{ color: '#ffffff' }}
                 >
                   <Phone className="w-5 h-5" />
                   <span>+91-9711065465</span>
@@ -168,6 +181,11 @@ export default function Navbar() {
                   data-testid="mobile-button-schedule"
                   asChild
                   onClick={() => setIsMobileMenuOpen(false)}
+                  style={{ 
+                    backgroundColor: '#d4af37',
+                    color: '#1a1a2e',
+                    fontWeight: '600'
+                  }}
                 >
                   <Link href="/contact">Schedule Viewing</Link>
                 </Button>
