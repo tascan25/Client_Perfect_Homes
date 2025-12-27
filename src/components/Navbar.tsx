@@ -172,7 +172,9 @@ export default function Navbar() {
                   style={{ color: '#ffffff' }}
                 >
                   <Phone className="w-5 h-5" />
-                  <span>+91-9711065465</span>
+                  <a href="tel:+91-9711065465">
+                    +91-9711065465
+                  </a>
                 </Button>
                 <Button
                   variant="default"
