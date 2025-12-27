@@ -52,7 +52,7 @@ export default function Navbar() {
                   {/* <Building2 className="w-6 h-6" style={{ color: '#1a1a2e' }} /> */}
                   <img src="/logo.png" alt="Logo" className="" />
                 </div>
-                <span className="text-2xl font-serif font-bold" style={{ color: '#ffffff' }}>
+                <span className="text-2xl font-serif font-bold text-slate-300 ">
                   Perfect Homes
                 </span>
               </motion.div>
@@ -69,7 +69,7 @@ export default function Navbar() {
                     whileHover={{ scale: 1.05 }}
                     className="text-base font-medium transition-colors cursor-pointer"
                     style={{
-                      color: location === link.href ? '#d4af37' : '#ffffff'
+                      color: location === link.href ? '#d4af37' : 'var(--color-slate-300)'
                     }}
                   >
                     {link.label}
@@ -84,7 +84,7 @@ export default function Navbar() {
                 size="default"
                 data-testid="button-phone"
                 className="gap-2"
-                style={{ color: '#ffffff' }}
+                style={{ color: 'var(--color-slate-300)' }}
               >
                 <Phone className="w-4 h-4" />
                 <a href="tel:+919711065465"><span>+91-9711065465</span></a>
