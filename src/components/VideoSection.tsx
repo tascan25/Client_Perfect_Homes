@@ -94,7 +94,7 @@ const VideoSection = () => {
           >
             <div className="flex items-center justify-between text-white">
               <div>
-                <h3 className="text-2xl font-semibold mb-1">Your Journey Starts Here</h3>
+                {/* <h3 className="text-2xl font-semibold mb-1">Your Journey Starts Here</h3> */}
                 <p className="text-white/80">Professional real estate solutions</p>
               </div>
               {/* <button className="hidden md:block px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
