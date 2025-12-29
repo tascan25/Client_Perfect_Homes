@@ -10,6 +10,7 @@ import { Card } from "../components/ui/card";
 import { useToast } from "../hooks/use-toast";
 import { apiRequest, queryClient } from "../lib/queryClient";
 import type { InsertContactSubmission } from "../../shared/schema";
+import home1 from '../assets/homes/home1.jpg';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -292,7 +293,7 @@ export default function Contact() {
           className="mt-20"
         >
           <Card 
-            className="p-12 backdrop-blur-xl text-center shadow-xl"
+            className="p-12 backdrop-blur-xl text-center shadow-xl flex flex-col justify-center items-center"
             style={{ 
               background: 'linear-gradient(135deg, rgba(26, 26, 46, 0.97) 0%, rgba(26, 26, 46, 0.93) 100%)',
               border: '1px solid rgba(212, 175, 55, 0.3)'
@@ -310,6 +311,12 @@ export default function Contact() {
               find the perfect property to match your lifestyle and investment
               goals.
             </p>
+            <div className="w-[50vw] bg-transparent my-4 flex flex-col justify-center items-center gap-4">
+              <span className="text-[#d4af37] text-xl md:text-2xlfont-serif font-semibold italic">Meet our Founder ~ Manjor Kumar</span>
+              <div className="rounded-4xl">
+                   <img src="/ownerimage.jpeg" alt="owner'simage"  className="object-contain rounded-4xl z-20 shadow-amber-300 w-[60vw] h-[60vh]"/>
+              </div>
+            </div>
             <div className="flex flex-wrap justify-center gap-12 mt-8">
               <div>
                 <div className="text-3xl font-bold mb-1" style={{ color: '#d4af37' }}>
