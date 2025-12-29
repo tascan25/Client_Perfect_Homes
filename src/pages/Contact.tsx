@@ -311,7 +311,7 @@ export default function Contact() {
               goals.
             </p>
             <div className="w-[50vw] bg-transparent my-1 md:my-4 flex flex-col justify-center items-center gap-2 md:gap-4">
-              <span className="text-[#d4af37] text-xl md:text-2xlfont-serif font-semibold italic">Meet our Founder ~ Manjor Kumar</span>
+              <span className="text-[#d4af37] text-xl md:text-2xl font-serif font-semibold italic">Meet our Founder ~ Manjor Kumar</span>
               <div className="rounded-4xl">
                    <img src="/ownerimage.jpeg" alt="owner'simage"  className="object-contain rounded-4xl z-20 shadow-amber-300 w-[60vw] h-[60vh]"/>
               </div>
