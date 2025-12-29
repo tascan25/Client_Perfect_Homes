@@ -11,7 +11,7 @@ import homeImage4 from "../assets/homes/home4.jpg";
         id:"1",
         title: "Luxury Mansion",
         description:
-          "An extraordinary waterfront estate featuring contemporary architecture, floor-to-ceiling windows, and breathtaking ocean views. This magnificent property offers the ultimate in luxury living with an infinity pool, private beach access, and meticulously landscaped grounds.",
+          "An extraordinary waterfront estate featuring contemporary architecture, floor-to-ceiling windows, and breathtaking ocean views. This magnificent property offers the ultimate in luxury living and meticulously landscaped grounds.",
         price: 8500000,
         location: "Faridabad, Sector - 70",
         bedrooms: 6,
@@ -22,7 +22,6 @@ import homeImage4 from "../assets/homes/home4.jpg";
         imageUrl: home1,
         featured: true,
         amenities: [
-          "Private Beach Access",
           "Home Theater",
           "Wine Cellar",
           "Smart Home System",
@@ -58,7 +57,7 @@ import homeImage4 from "../assets/homes/home4.jpg";
         id:"3",
         title: "Contemporary Villa",
         description:
-          "Perched on a hillside with sweeping mountain vistas, this contemporary villa combines modern minimalism with natural beauty. Features include an open floor plan, seamless indoor-outdoor living, and premium materials throughout.",
+          "Sophisticated urban living at its finest. This stunning penthouse features sleek contemporary design, panoramic city views, and premium finishes throughout. Located in the heart of downtown with world-class amenities and concierge services.",
         price: 6800000,
         location: "Faridabad, Sector - 70",
         bedrooms: 5,
@@ -81,7 +80,7 @@ import homeImage4 from "../assets/homes/home4.jpg";
         id:"4",
         title: "Coastal Estate",
         description:
-          "Experience paradise in this stunning beachfront estate with direct ocean access. Modern tropical architecture meets luxury living with expansive terraces, infinity pool, and lush landscaping creating your private oasis.",
+          "Sophisticated urban living at its finest. This stunning penthouse features sleek contemporary design, panoramic city views, and premium finishes throughout. Located in the heart of downtown with world-class amenities and concierge services.",
         price: 12500000,
         location: "Faridabad, Sector - 70",
         bedrooms: 7,
@@ -92,8 +91,6 @@ import homeImage4 from "../assets/homes/home4.jpg";
         imageUrl: homeImage4,
         featured: false,
         amenities: [
-          "Private Beach",
-          "Infinity Pool",
           "Outdoor Pavilion",
           "Summer Kitchen",
           "Home Spa",
