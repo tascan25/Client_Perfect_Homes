@@ -10,7 +10,6 @@ import { Card } from "../components/ui/card";
 import { useToast } from "../hooks/use-toast";
 import { apiRequest, queryClient } from "../lib/queryClient";
 import type { InsertContactSubmission } from "../../shared/schema";
-import home1 from '../assets/homes/home1.jpg';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
