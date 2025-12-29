@@ -310,10 +310,10 @@ export default function Contact() {
               find the perfect property to match your lifestyle and investment
               goals.
             </p>
-            <div className="w-[50vw] bg-transparent my-1 md:my-4 flex flex-col justify-center items-center gap-2 md:gap-4">
-              <span className="text-[#d4af37] text-xl md:text-2xl font-serif font-semibold italic">Meet our Founder ~ Manjor Kumar</span>
+            <div className="w-[50vw] bg-transparent my-1 md:my-4 flex flex-col justify-center items-center gap-2 md:gap-5">
+              <span className="text-[#d4af37] text-lg md:text-2xl font-serif font-semibold italic">Meet our Founder ~ Manjor Kumar</span>
               <div className="rounded-4xl">
-                   <img src="/ownerimage.jpeg" alt="owner'simage"  className="object-contain rounded-4xl z-20 shadow-amber-300 w-[60vw] h-[60vh]"/>
+                   <img src="/ownerimage.jpeg" alt="owner'simage"  className="object-contain rounded-xl z-20 shadow-amber-300 w-[60vw] h-[40vh] md:h-[60vh]"/>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-12 mt-8">
